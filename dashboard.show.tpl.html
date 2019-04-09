@@ -1,0 +1,233 @@
+<div class="box box-primary">
+<h2 class="text-center">EXPEIPI</h2>
+
+    
+
+    <div class="box-header with-border">
+      <h3 class="box-title">Metricas</h3>
+    </div>
+
+    	<div class="box-body">
+		        <div class="col-lg-3 col-xs-6">
+		          <!-- small box -->
+		          <div class="small-box bg-green">
+		            <div class="inner">
+		              <h3>{{metrica1.VALOR}}</h3>
+
+		              <p>{{metrica1.TEXTO}}</p>
+		            </div>
+                <div class="icon">
+                  <i class="fa  fa-paper-plane-o "></i>
+                </div>
+<!-- 		            <a href ng-click="abrir = !abrir; metrica1_click();" class="small-box-footer">
+		            		Detalle
+		            	<i ng_show="!abrir" class="fa  fa-plus-square"></i>
+		            	<i ng_show="abrir" class="fa fa-minus-square"></i>
+		            </a> -->
+
+		          </div>
+		        </div>
+
+
+		        <div class="col-lg-3 col-xs-6">
+		          <!-- small box -->
+		          <div class="small-box bg-aqua">
+		            <div class="inner">
+		              <h3>{{metrica2.VALOR}}</h3>
+
+		              <p>{{metrica2.TEXTO}}</p>
+		            </div>
+                <div class="icon">
+                  <i class="fa   fa-flag-checkered"></i>
+                </div>
+<!-- 		            <a href ng-click="abrir = !abrir; metrica2_click();" class="small-box-footer">
+		            		Detalle
+		            	<i ng_show="!abrir" class="fa fa-plus-square"></i>
+		            	<i ng_show="abrir" class="fa fa-minus-square"></i>
+		            </a> -->
+		          </div>
+		        </div>
+		        <!-- ./col -->
+		        <!-- ./col -->
+		        <div class="col-lg-3 col-xs-6">
+		          <!-- small box -->
+		          <div class="small-box bg-yellow">
+		            <div class="inner">
+		              <h3>{{metrica3.VALOR}}</h3>
+
+		              <p>{{metrica3.TEXTO}}</p>
+		            </div>
+                <div class="icon">
+                  <i class="fa  fa-bolt"></i>
+                </div>
+<!-- 		            <a href ng-click="abrir = !abrir; metrica3_click();" class="small-box-footer">
+		            		Detalle
+		            	<i ng_show="!abrir" class="fa fa-plus-square"></i>
+		            	<i ng_show="abrir" class="fa fa-minus-square"></i>
+		            </a> -->
+		          </div>
+		        </div>
+		        <!-- ./col -->
+		        <div class="col-lg-3 col-xs-6">
+		          <!-- small box -->
+		          <div class="small-box bg-red">
+		            <div class="inner">
+		              <h3>{{metrica4.VALOR}}</h3>
+
+		              <p>{{metrica4.TEXTO}}</p>
+		            </div>
+                <div class="icon">
+                  <i class="fa  fa-pencil"></i>
+                </div>
+<!-- 		            <a href ng-click="abrir = !abrir; metrica4_click();" class="small-box-footer">
+		            		Detalle
+		            	<i ng_show="!abrir" class="fa fa-plus-square"></i>
+		            	<i ng_show="abrir" class="fa fa-minus-square"></i>
+		            </a> -->
+		          </div>
+		        </div>
+		        <!-- ./col -->
+
+    	</div>
+
+<!--     	<div class="col-lg-12 col-xs-12" ng-show="abrir">
+
+		          <div class="small-box {{metrica.propiedades.color}}">
+		            <div class="inner">
+		              <h3>{{metrica.propiedades.titulo}}</h3>
+
+		              <div ng-repeat="metrica in metrica.detalles">
+		              		<p><b>{{metrica.TITULO}} </b><span>{{metrica.VALOR}}</span></p>
+		              </div>
+		            </div>
+
+		            <a href ng-click="abrir = !abrir"  class="small-box-footer">Cerrar <i class="fa fa fa-minus-square"></i></a>
+		          </div>
+		</div> -->
+
+    	<div class="box-header with-border">
+			<h3 class="box-title">Estadisticas</h3>
+		</div>
+		<div class="box-body">
+		<div class="col-sm-12">
+			<div class="col-sm-7">
+					<div class="box box-info">
+			            <div class="box-header with-border">
+			              <h2 class="box-title" style="font-size: 19px;">Solicitudes Activas</h2>
+                    <div class="box-tools pull-right">
+                      <button type="button" ng-click="detalle_estadistica1 = !detalle_estadistica1;"  class="btn btn-box-tool" data-widget="collapse" style="padding-bottom: 0px; padding-top: 0px;">
+                        <i ng_show="detalle_estadistica1" class="fa fa-plus"></i>
+      		            	<i ng_show="!detalle_estadistica1" class="fa fa-minus"></i>
+                      </button>
+                    </div>
+			            </div>
+
+			            <div class="box-body" ng-hide="detalle_estadistica1">
+			              	<canvas  id="bar" class="chart chart-bar" chart-data="data"
+								chart-labels="labels" chart-series="series" chart-options="options"
+								chart-dataset-override="datasetOverride" chart-click="onClick">
+							</canvas>
+			            </div>
+					</div>
+			</div>
+			<div class="col-sm-5">
+			    <div class="box box-danger">
+			    		<div class="box-header with-border">
+			              <h3 class="box-title" style="font-size: 19px;">Solicitudes por Estado</h3>
+                    <div class="box-tools pull-right">
+                      <button type="button" ng-click="detalle_estadistica2 = !detalle_estadistica2;"  class="btn btn-box-tool" data-widget="collapse" style="padding-bottom: 0px; padding-top: 0px;">
+                        <i ng_show="detalle_estadistica2" class="fa fa-plus"></i>
+      		            	<i ng_show="!detalle_estadistica2" class="fa fa-minus"></i>
+                      </button>
+                    </div>
+			            </div>
+			            <div class="box-body" ng-hide="detalle_estadistica2">
+			              	<canvas id="doughnut" class="chart chart-doughnut" height="280%"
+							  chart-data="data2" chart-labels="labels2">
+							</canvas>
+			          </div>
+			    </div>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="box-header with-border">
+			<h3 class="box-title">Estadisticas</h3>
+		</div>
+		<div class="box-body">
+		<div class="col-sm-12">
+			<div class="col-sm-4">
+					<div class="box box-success">
+			            <div class="box-header with-border">
+			              <h2 class="box-title" style="font-size: 19px;">Solicitudes por Dependencia</h2>
+                    <div class="box-tools pull-right">
+                      <button type="button" ng-click="detalle_estadistica3 = !detalle_estadistica3;"  class="btn btn-box-tool" data-widget="collapse" style="padding-bottom: 0px; padding-top: 0px;">
+                        <i ng_show="detalle_estadistica3" class="fa fa-plus"></i>
+      		            	<i ng_show="!detalle_estadistica3" class="fa fa-minus"></i>
+                      </button>
+                    </div>
+			            </div>
+
+			            <div class="box-body" ng-hide="detalle_estadistica3">
+			              	<canvas  id="pie" class="chart chart-pie" height="300" chart-click="Click3"
+						  		chart-dataset-override="datasetOverride"  chart-data="data3"
+								chart-labels="labels3" chart-options="options" >
+							</canvas>
+			            </div>
+					</div>
+			</div>
+			<div class="col-sm-8">
+			    <div class="box box-warning">
+			    		<div class="box-header with-border">
+			              <h3 class="box-title" style="font-size: 19px;">Detalle {{DetalleDependencia}}</h3>
+                    <div class="box-tools pull-right">
+                      <button type="button" ng-click="detalle_estadistica4 = !detalle_estadistica4;"  class="btn btn-box-tool" data-widget="collapse" style="padding-bottom: 0px; padding-top: 0px;">
+                        <i ng_show="detalle_estadistica4" class="fa fa-plus"></i>
+      		            	<i ng_show="!detalle_estadistica4" class="fa fa-minus"></i>
+                      </button>
+                    </div>
+			            </div>
+			            <div class="box-body" ng-hide="detalle_estadistica4">
+			              	<div ui-grid="gridOptionsDetalle" ui-grid-pagination  class="grid"></div>
+			          </div>
+			    </div>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="box-header with-border">
+			<h3 class="box-title">Solicitudes por Renglon</h3>
+		</div>
+		<div class="box-body">
+			<div class="col-sm-12">
+				<div class="col-sm-12">
+							<div class="box box-primary">
+					            <div class="box-body">
+					            <div class="box-header with-border">
+					              <div class="col-sm-1">
+					              	<h3 class="box-title">Año</h3>
+					              </div>
+					              <div class="col-sm-3">
+						                <select class="form-control" name="singleSelect" ng-change="selectedAnio()" ng-model="ANIO" required>
+						                      <option value="2017">2017</option>
+						                      <option value="2016">2016</option>
+						                      <option value="2015">2015</option>
+						                  </select>
+						            </div>
+
+					            </div>
+					              	    	<canvas id="base" class="chart-horizontal-bar" chart-data="data4"
+											chart-labels="labels4" chart-series="series4" chart-options="options"
+											chart-dataset-override="datasetOverride" chart-click="onClick">
+											</canvas>
+					            </div>
+							</div>
+					</div>
+			</div>
+		</div>
+
+
+
+</div>

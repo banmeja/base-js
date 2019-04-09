@@ -1,0 +1,6 @@
+<uib-tabset>
+  <uib-tab ng-repeat="tab in tabs" ng-click="typeof(tab.visible, 'boolean' ) ? ($eval(tab.disabled) ? goTab($event) : '' ) : ($eval(tab.disabled) ? goTab($event) : '' )" ui-sref="{{tab.link}}" ui-sref-active="active" active="false" disable="{{tab.disabled}}" ng-show="typeof(tab.visible, 'boolean' ) ? tab.visible : $eval(tab.visible)">
+    <uib-tab-heading><i class="{{tab.icon}}"></i> {{tab.name}}</uib-tab-heading>
+    <div ng-include="tab.template"></div>
+  </uib-tab>
+</uib-tabset>

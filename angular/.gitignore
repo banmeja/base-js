@@ -1,0 +1,35 @@
+.DS_STORE
+
+bazel-*
+e2e_test.*
+node_modules
+bower_components
+tools/gulp-tasks/cldr/cldr-data/
+
+# Include when developing application packages.
+pubspec.lock
+<<<<<<< HEAD
+FRONTENDCCJ/.c9
+=======
+.c9
+>>>>>>> 0f74b6cf36755f3bb78d5d1d4dd936f66094ef6a
+.idea/
+.settings/
+*.swo
+modules/.settings
+.bazelrc
+.vscode
+modules/.vscode
+
+# Don't check in secret files
+*secret.js
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+
+# build-analytics
+.build-analytics
+
+# rollup-test output
+modules/rollup-test/dist/

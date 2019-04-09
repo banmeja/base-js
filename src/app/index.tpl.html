@@ -1,0 +1,307 @@
+<div class="wraper">
+	<header class="main-header">
+	  <!-- Logo -->
+	  <a ui-sref="index.home()" class="logo">
+	    <!-- mini logo for sidebar mini 50x50 pixels -->
+	    <span class="logo-mini"><b>OJ</b></span>
+	    <!-- logo for regular state and mobile devices -->
+	    <span class="logo-lg"><img src="img/LogoOJ-PII.png"></span>
+	  </a>
+	  <!-- Header Navbar: style can be found in header.less -->
+	  <nav class="navbar navbar-static-top" role="navigation">
+	    <!-- Sidebar toggle button-->
+	    <a href="javascript:void(0)" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+	      <span class="sr-only">Toggle navigation</span>
+	    </a>
+			<i class="fa fa-bank" style="color: #ffffff"></i>
+			<span class="navbar-title"> &nbsp; {{perfilUser}} - Organismo Judicial - República Guatemala </span>
+	    <div class="navbar-custom-menu">
+	      <ul class="nav navbar-nav">
+	        <!-- Messages: style can be found in dropdown.less-->
+	        <!--<li class="dropdown messages-menu">
+	          <a href="javascript:void(0)">
+	            <i class="fa fa-envelope-o"></i>
+	           <!--  <span class="label label-success">{{mensajes2}}</span>
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li class="header">Tienes {{mensajes2}} notificaciones</li>
+	            <li >
+	              <!-- inner menu: contains the actual data
+	              <ul class="menu">
+	                <li ng-repeat="item in alertasporvencer.Alertas"><!-- start message
+	                  <a href="javascript:void(0)">
+	                    <div class="pull-left">
+	                      <i class="fa fa-user"></i>
+	                    </div>
+											<h5>
+											 <p>Mensaje: {{item.ALERTA}}</p>
+											 <p>Cantidad: {{item.CANTIDAD}}</p>
+											</h5>
+										<!--  <p>Estado: {{item.ESTADO}}</p>
+	                  </a>
+	                </li><!-- end message
+	              </ul>
+	            </li>
+	            <li class="footer"><a href="javascript:void(0)">Ver todos los mensajes</a></li>
+	          </ul>
+	        </li>-->
+	        <!-- Notifications: style can be found in dropdown.less -->
+	        <!--<li class="dropdown notifications-menu">
+	          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+	            <i class="fa fa-bell-o"></i>
+	            <span class="label label-warning">{{mensajes}}</span>
+	          </a>
+	          <ul class="dropdown-menu">
+	            <li class="header">Tienes {{mensajes}} mensajes</li>
+	            <li>
+	              <!-- inner menu: contains the actual data -
+	              <ul class="menu">
+	                <li ng-repeat="item in alertasActual.Alertas">
+	                  <a href="javascript:void(0)">
+	                  <div class="pull-left">
+	                    <i class="fa fa-users text-aqua"></i>
+	                     </div>
+											 <h4>
+ 											 <p>Bandeja: {{item.BANDEJA}}</p>
+ 											 <p>Fecha Envio: {{item.FECHA_ENVIO}}</p>
+ 											 <p>Cantidad: {{item.CANTIDAD}}</p>
+ 											 <small><i class="fa fa-clock-o"></i> </small>
+ 										 </h4>
+										</a>
+	                </li>
+	              </ul>
+	            </li>
+	            <li class="footer"><a href="javascript:void(0)">Ver todas</a></li>
+	          </ul>
+	        </li>-->
+					<!-- Tasks: style can be found in dropdown.less -->
+					<li class="dropdown tasks-menu">
+							<a href="./docs/acuerdo662018.pdf" class="dropdown-toggle" target="_blank" >
+								<i class="fa fa-flag-o">  </i>
+								<span class="label label-danger">Acuerdo 66-2018</span>
+							</a>
+
+					</li>
+					<li class="dropdown tasks-menu">
+							<a href="" class="dropdown-toggle" target="_blank" >
+								
+								<span class="label label-danger">?</span>
+							</a>
+
+					</li>
+					<li class="dropdown tasks-menu">
+							<a href="" class="dropdown-toggle" target="_blank" >
+								
+								<span class="label label-danger">?</span>
+							</a>
+
+					</li>
+					<li class="dropdown tasks-menu">
+							<a href="" class="dropdown-toggle" target="_blank" >
+								
+								<span class="label label-danger">?</span>
+							</a>
+
+	        </li>
+	        <li class="dropdown tasks-menu">
+
+	          <a href="./docs/manualPortal.pdf" class="dropdown-toggle" target="_blank" >
+	            <i class="fa fa-flag-o">  </i>
+	            <span class="label label-danger">Manual de Usuario</span>
+	          </a>
+	   <!--        <ul class="dropdown-menu">
+	            <li class="header">Tienes {{mensaje3}} tarea</li>
+	            <li>
+	               inner menu: contains the actual data
+	              <ul class="menu">
+	                <li ng-repeat="item in alertasVencidas"> Task item
+	                  <a href="javascript:void(0)">
+	                    <h3>
+	                    	<h4>
+	 											<p>Bandeja: {{item.BANDEJA}}</p>
+	 											<p>Fecha Envio: {{item.FECHA_ENVIO}}</p>
+	 											<p>Cantidad: {{item.CANTIDAD}}</p>
+	 											<small><i class="fa fa-clock-o"></i> </small>
+	 										 	</h4>
+	                      <small class="pull-right"></small>
+	                    </h3>
+	                  </a>
+	                </li>
+	              </ul>
+	            </li>
+	            <li class="footer">
+	              <a href="javascript:void(0)">Ver todas las tareas</a>
+	            </li>
+	          </ul> -->
+	        </li>
+	        <!-- User Account: style can be found in dropdown.less -->
+	        <li class="dropdown user user-menu">
+	          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+	            <img data-ng-src="data:image/png;base64,{{loginData.foto}}" class="user-image" alt="User Image">
+	            <span class="hidden-xs">{{loginData.usuario}}</span>
+
+						</a>
+						
+						
+	          <ul class="dropdown-menu">
+	            <!-- User image -->
+	            <li class="user-header">
+	              <img data-ng-src="data:image/png;base64,{{loginData.foto}}" class="img-circle" alt="User Image">
+	              <p>
+	                {{loginData.usuarioNombre}}
+	                <small>{{loginData.correo}} </small>
+	              </p>
+	            </li>
+	            <!-- Menu Body -->
+	            <!-- <li class="user-body"></li> -->
+	            <!-- Menu Footer-->
+	            <li class="user-footer">
+	              <!-- div class="pull-left">
+	                <a href="javascript:void(0)" class="btn btn-default btn-flat">Perfil</a>
+	              </div> -->
+	              <div class="pull-right">
+	                <a href="javascript:void(0)" class="btn btn-default btn-flat" ng-click="logout()">Cerrar sesi&oacute;n</a>
+	              </div>
+	            </li>
+	          </ul>
+	        </li>
+	        <!-- Control Sidebar Toggle Button -->
+	        <!--<li>
+	          <a href="javascript:void(0)" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+	        </li>-->
+	      </ul>
+	    </div>
+	  </nav>
+	</header>
+	<!-- Left side column. contains the logo and sidebar -->
+	<aside class="main-sidebar">
+	  <!-- sidebar: style can be found in sidebar.less -->
+	  <section class="sidebar">
+			<br><br><br>
+	    <ul class="sidebar-menu">
+	      <li class="header">
+					{{tituloMenu}}
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(1).length<=0" >
+				    <a href="javascript:void(0)">
+				        <i class="fa fa-folder-open"></i><span> {{getNombreMenu(1)}} </span> <i class="fa fa-angle-left pull-right"></i>
+				    </a>
+				    <ul class="treeview-menu">
+						<li ng-repeat="item in getDataMenu(1)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}()" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+				    </ul>
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(2).length<=0">
+					<a href="javascript:void(0)">
+	          <i class="fa fa-folder-open"></i><span> {{getNombreMenu(2)}} </span> <i class="fa fa-angle-left pull-right"></i>
+	        </a>
+	        <ul class="treeview-menu">
+						<li ng-repeat="item in getDataMenu(2)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+		    	</ul>
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(10).length<=0">
+					<a href="javascript:void(0)">
+	          <i class="fa fa-folder-open"></i><span> {{getNombreMenu(10)}} </span> <i class="fa fa-angle-left pull-right"></i>
+	        </a>
+	        <ul class="treeview-menu">
+						<li ng-repeat="item in getDataMenu(10)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+		    	</ul>
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(11).length<=0">
+					<a href="javascript:void(0)">
+	          <i class="fa fa-folder-open"></i><span> {{getNombreMenu(11)}} </span> <i class="fa fa-angle-left pull-right"></i>
+	        </a>
+	        <ul class="treeview-menu">
+						<li ng-repeat="item in getDataMenu(11)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+		    	</ul>
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(14).length<=0">
+					<a href="javascript:void(0)">
+	          <i class="fa fa-folder-open"></i><span> {{getNombreMenu(14)}} </span> <i class="fa fa-angle-left pull-right"></i>
+	        </a>
+	        <ul class="treeview-menu">
+						<li ng-repeat="item in getDataMenu(14)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+		    	</ul>
+				</li>
+				<li class="treeview" ng-hide="getDataMenu(15).length<=0">
+						<a href="javascript:void(0)">
+							<i class="fa fa-folder-open"></i><span> {{getNombreMenu(15)}} </span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li ng-repeat="item in getDataMenu(15)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+						</ul>
+					</li>
+					<li class="treeview" ng-hide="getDataMenu(16).length<=0">
+						<a href="javascript:void(0)">
+							<i class="fa fa-folder-open"></i><span> {{getNombreMenu(16)}} </span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li ng-repeat="item in getDataMenu(16)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+						</ul>
+					</li>
+					<li class="treeview" ng-hide="getDataMenu(18).length<=0">
+						<a href="javascript:void(0)">
+							<i class="fa fa-folder-open"></i><span> {{getNombreMenu(18)}} </span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu">
+							<li ng-repeat="item in getDataMenu(18)" ng-class="{ active: $state.includes( '{{ item.url }}' ) }"><a ui-sref="{{ item.url }}({menuId:{{ item.menuId }}})" ui-sref-opts="{reload: false}"><i class="{{ item.icono }} {{ item.color }}"></i>{{ item.nombreCorto }}</a></li>
+						</ul>
+					</li>
+			</ul>
+  </section>
+	  <!-- /.sidebar -->
+	</aside>
+
+	<!-- Content Wrapper. Contains page content -->
+	<div class="content-wrapper">
+	  <!-- Content Header (Page header) -->
+	  <section class="content-header" ui-view="hint">
+	    <!-- <ol class="breadcrumb">
+	      <li><a href="javascript:void(0)"><i class="fa fa-dashboard"></i> Home</a></li>
+	      <li class="active">Dashboard</li>
+	    </ol> -->
+	  </section>
+
+	  <!-- Main content -->
+	  <section class="content">
+	    <!-- Here is the main ui-view (unnamed) and will be populated by its immediate children's templates
+	         unless otherwise explicitly named views are targeted. -->
+	    <div ui-view class="slide"></div>
+	  </section><!-- /.content -->
+	</div><!-- /.content-wrapper -->
+	<footer class="main-footer">
+	  <div class="pull-right hidden-xs"></div>
+	  <strong> Organismo Judicial</strong>
+	</footer>
+
+	<!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="javascript:void(0)" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Caja de herramientas</h3>
+        <ul class='control-sidebar-menu'>
+          <li ng-show="expedientesService.getExpediente().p_numero_unico">
+            <a href='javascript:void(0)'>
+              <i class="menu-icon fa fa-print bg-green" ng-click="crearCaratula(expedientesService.getExpediente().p_numero_unico,loginData.id_despacho)"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading" ng-click="crearCaratula(expedientesService.getExpediente().p_numero_unico,loginData.id_despacho)">Generar Caratula</h4>
+                <!-- <p>Will be 23 on April 24th</p> -->
+              </div>
+            </a>
+          </li>
+        </ul><!-- /.control-sidebar-menu -->
+      </div><!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
+    </div>
+  </aside><!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class='control-sidebar-bg'></div>
+</div><!-- ./wrapper -->

@@ -1,0 +1,34 @@
+
+
+/* Styles for tab labels */
+mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+}
+
+/* Styles for tab labels */
+mat-tab-label-container {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: #e6e213;
+    color: white;
+    font-weight: 700;
+    opacity: unset;
+}
+
+/* Styles for the active tab label */
+mat-tab-label.mat-tab-label-active  {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: #bc5a3c;
+    color: white;
+    font-weight: 700;
+    opacity: unset;
+}
+
+mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background: #89dd94;
+}

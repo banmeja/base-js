@@ -1,0 +1,108 @@
+<div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" align="center">
+        <img src="img/logo2.png"/ style="height: 120px">
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <h3>{{param.ins}}</h3>
+        <h4>{{param.sistema}} </h4>
+        <h4>ADHESION DE USUARIOS </h4>
+        <h4>{{consulta.nombreDependencia}} </h4>
+    </div>
+</div>
+<br>
+<div class="box box-success">
+    <div class="box-header primary background-header">
+        <h3 class="box-title background-header-text">Adhesión del beneficiario al servicio de notificaciones electrónicas</h3>
+    </div>
+    <div>
+        <div class="box box-body ">
+            <div class="row">
+                <div class="col-sm-12 ">
+                        <div class="col-sm-2 ">
+                                <label for="ANEXOS" class="pull-right" >Tipo de persona:&#160<i class="fa fa-user text-blue" style="font-size:14px"></i></label>
+                        </div>
+                    
+                    
+                    <div class="col-sm-3">                            
+                        <ui-select class="form-control input-sm" name="persona" ng-model="plantilla.peopleSelectAdhesion" theme="bootstrap"
+                            sortable="true" ng-change="capturePeopleAdhesion()">
+                            <ui-select-match class="ui-select-match" placeholder="Seleccione">{{$select.selected.descripcionPersona}}</ui-select-match>
+                            <ui-select-choices class="ui-select-choices" repeat="item in plantilla.peopleAdhesion | filter: {idTipoPersona: $select.search}">
+                                <div ng-bind-html="item.descripcionPersona | highlight: $select.search" ng-init="1"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+            </div><!--0*-->
+<br>
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="col-sm-2 ">
+                            <label  for="ANEXOS" class="pull-right">Empresa telefónica:&#160<i class="fa fa-cubes fa-3 text-orange" style="font-size:14px"></i></label>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <ui-select class="form-control input-sm" name="proveedor" ng-model="plantilla.empresaSelect" theme="bootstrap"
+                        sortable="true" ng-change="capturaEmpresa()">
+                        <ui-select-match class="ui-select-match" placeholder="Seleccione">{{$select.selected.nombreEmpresa}}</ui-select-match>
+                        <ui-select-choices class="ui-select-choices" repeat="item in plantilla.empresa | filter: {nombreEmpresa: $select.search}">
+                            <div ng-bind-html="item.nombreEmpresa | highlight: $select.search"></div>
+                        </ui-select-choices>
+                    </ui-select>
+                    </div>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-12 ">
+                        <div class="col-sm-2 ">
+                                <label  for="ANEXOS" class="pull-right">Número de telefóno:&#160<i class="fa fa-phone fa-3" style="font-size:14px"></i></label>
+                        </div>
+                    
+                    <div class="col-sm-3">                        
+                        <input type="text" ng-model="plantilla.noTelefono" numbers-only maxlength="8" style="font-size:15px;" class="form-control">                        
+                    </div>
+                    
+                </div>
+            </div><br>    
+            <!--*-->
+            <div class="row">
+                <div class="col-sm-12 ">
+                        <div class="col-sm-2 ">
+                                <label  for="ANEXOS" class="pull-right">Correo electrónico:&#160<i class="fa fa-envelope text-red" style="font-size:14px"></i></label>
+                        </div>
+                    
+                    <div class="col-sm-3">                        
+                        <input type="mail" ng-model="plantilla.correo" style="font-size:15px;" class="form-control">                        
+                    </div>
+                    <div class="col-sm-3">
+                        
+                        <button type="button" class="btn btn-success btn-sm" ng-click="agregarInformacion()" style="padding-left: 10px;">+</button>        
+                    </div>
+                </div>
+            </div><br>
+            <div>
+                <!-- <button ng-click="refrescar()" class="btn btn-xs btn-info"><i class="fa fa-refresh"></i></button>                     -->
+                <!-- <button type="button" class="btn btn-success btn-sm" ng-click="agregarInformacion()" style="padding-left: 10px;">Agregar información</button> -->
+            </div>
+
+            </div>            
+            <div ui-grid="gridOptionsAdhesion" ui-grid-edit ui-grid-pagination ui-grid-selection ui-grid-auto-resize
+                class="grid"></div>
+
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&#160 <button type="button" class="btn btn-success btn-block"
+                ng-click="reg()"> <i class="fa fa-save" style="font-size:14px">&#160REGISTRAR</i></button>
+        </div>
+    </div>
+    <!-- /.box-header -->
+
+    <!-- /.box-body -->
+
+
+
+
+</div>
+</div>
+<!-- /.box-body -->
+</div>

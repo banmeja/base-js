@@ -1,0 +1,69 @@
+
+<div class="box box-primary">
+        <div class="box-title"></div>
+        <div class="box-body text-center">
+            <p> <h2> <b> Portal de Gestión de Apoyo Judicial en Materia de Familia</b></h2></p>
+        </br>
+         <div class="box-body text-left">
+             
+            <div class="row"> <!-- row -->      
+                <input type="checkbox" ng-model="checked" ng-show="false">                              
+                    <label for="consulta"><h3><b>IMPRESIÓN DE ESTADO DE CUENTA</b></h3></label> <br>
+                    <label for="caso"><h4>INGRESE NÚMERO DE CASO DE PENSIÓN ALIMENTICIA</h4></label><br>        
+            </div> <!-- end row-->
+            <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" class="form form-control" ng-model="busqueda" ng-keypress="buscarNoCaso($event)" numbers-only required>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <button class="btn btn-md btn-primary" ng-click="btnBusquedaCaso()" ><i class="fa fa-search"></i>&#160 CONSULTAR</button>                        
+                            <button class="btn btn-md btn-default" ng-click="btnLimpia()" ><i class="fa fa-eraser"></i>&#160 LIMPIAR</button>                        
+                    </div>                
+            </div><br>
+            <div class="row well">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <label for="nombreCaso">NOMBRE DEL CASO (BENEFICIARIO):</label><input type="text" class="form form-control" ng-model="nombreCaso"  disabled>
+                    <label for="nombreCaso">NOMBRE DEL DEPOSITANTE:</label><input type="text" class="form form-control" ng-model="nombreDepositante"  disabled>
+                    <label for="estado">ESTADO DEL CASO:</label><input type="text" class="form form-control" ng-model="estadoCaso"  disabled>                
+                    <!-- <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
+                        <label for="nombreCaso"><h4>AÑO:</h4></label><input type="text" class="form form-control" ng-model="anioRecibo" numbers-only>                
+                    </div>
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                        <label for="estado"><h4>220-C:</h4></label><input type="text" class="form form-control" ng-model="noRecibo" numbers-only required>
+                    </div> -->
+                    <br>              
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-5"><button type="button" class="btn btn-success btn-block" ng-click="impresion()" ng-disabled="checked"><i class="fa fa-print"></i>&#160IMPRIMIR ESTADO <br>DE CUENTA</button></div>                
+                                    
+                </div>             
+            </div><!--finseccion-->
+            <!-- <div class="row well">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">                    
+                        <h4><b>Formulario para solicitud de Reimpresión de Recibo </b></h4>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                        <h5><b>Año de Recibo:</b></h5> 
+                     <input type="text" ng-model="solAnioRecibo" numbers-only minlength="4"> </div>
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                        <h5><b>Recibo 220-C:</b></h5> 
+                     <input type="text" ng-model="solRecibo" numbers-only></div>
+                <div class="col-xs-12 col-sm-5 col-md-3 col-lg-5">
+                    <h5><b>Descripción de la solicitud *</b></h5> 
+                    <input type="text" class="form form-control" ng-model="solMotivo" placeholder="Justificación necesaria">
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">  <br><br>                              
+                <button type="button" class="btn btn-primary btn-md" ng-click="btnsolicitud()"><i class="fa fa-chain "></i>&#160SOLICITAR REIMPRESION</button>
+                </div>
+            </div> -->
+            
+        </div>
+                <br>
+               <!--<div class="row well">
+                    <div ui-grid="realizarConsulta" ui-grid-pagination ui-grid-section class="grid" ui-grid-auto-resize></div>
+               </div>-->
+         </div>
+        </div>
+           
+        
+    </div>
+    <BUTton ng-click="sedess()"></BUTton>
+    

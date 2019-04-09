@@ -1,0 +1,25 @@
+
+<div class="wrapper" [style.display]="banderaOcultar?'none':''">
+    <div class="sidebar"  data-background-color="blue" data-image="./assets/img/sidebar-1.jpg">
+        <app-sidebar-cmp #menuLeft></app-sidebar-cmp>
+        <div class="sidebar-background" style="background-image: url(assets/img/sidebar-1.jpg)"></div>
+    </div>
+    <div class="main-panel">
+        <app-navbar-cmp #menuUp></app-navbar-cmp>
+        <div *ngIf="xx">
+            <router-outlet></router-outlet>
+        </div>
+        <div *ngIf="!isMap()">
+            <!-- <app-footer-cmp></app-footer-cmp> -->
+        </div>
+    </div>
+    <app-fixedplugin #menuRight></app-fixedplugin>
+</div>
+
+<div [style.display]="!banderaOcultar?'none':'inherit'">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+</div>

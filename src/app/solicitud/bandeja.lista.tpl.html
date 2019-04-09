@@ -1,0 +1,48 @@
+
+<div>
+        <div align="center">
+                <img src="img/logo2.png" alt="" height="75px">
+                <h3>{{param.ins}}</h3>
+                <h4>{{param.pantalla}}</h4>
+                
+            </div>
+    
+   
+</div>
+
+
+<div class="box box-info">
+    <div class="box-header primary background-header">
+        <h3 class="box-title background-header-text">Bandeja de por aperturar</h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body primary background-body-box">
+          
+            <div ui-grid="bandejaEdicion" ui-grid-pagination ui-grid-section class="grid" ui-grid-auto-resize></div>
+        
+    </div>
+    
+    
+    <!-- /.box-body -->
+
+
+</div>
+
+<div class="box box-info">
+        <div class="box-header primary background-header">
+            <h3 class="box-title background-header-text">Bandeja de casos aperturados</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body primary background-body-box">
+              
+                <div ui-grid="bandejaApertura" ui-grid-pagination ui-grid-section class="grid" ui-grid-auto-resize></div>
+            
+        </div>
+        
+        
+        <!-- /.box-body -->
+    
+    
+    </div>
+<!-- /.box-body -->
+</div>
